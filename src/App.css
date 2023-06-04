@@ -21,3 +21,17 @@
   padding: 0 0 20px 0;
   font-size: 20px;
 }
+
+.game-info {
+  text-align: center;
+}
+
+.game-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0 ;
+}
+
+.game-item {
+  margin-bottom: 15px;
+}

@@ -1,13 +1,8 @@
-import {useState} from 'react'
+// import {useState} from 'react'
 import Square from './Square'
 
 
-const Board = () => {
-  //oかxを区別するためのフラグの状態
-  const [xIsNext, setXIsNext] = useState(true);
-  
-  const [squares, setSquares] = useState(Array(9).fill(null));
-
+const Board = ({ xIsNext, squares, onPlay }) => {
   const handleClick = (squares_index) => {
     //同じ位置を複数回クリックしても値が反転しないように
     //ゲームが終わったとき処理を終わらせる
@@ -23,9 +18,7 @@ const Board = () => {
       nextSquares[squares_index] = "◯";
     }
 
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
-    // console.log(nextSquares);
+    onPlay(nextSquares);
   }
 
   const calculateWinner = (squares) => {
