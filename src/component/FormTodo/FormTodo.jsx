@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 // import Form from './Form'
 // import List from './List'
-
-
 const FormTodo = () => {
-  const tasksData = [{name: "店を予約する", completed: false}]
+  const tasksData = [{id: 1, name: "店を予約する"}]
   const [tasks, setTasks] = useState(tasksData);
   const [val, setVal] = useState("");
   const addTask = () => {
     const newTasks = [...tasks];
-    setTasks([...newTasks, {name: val, completed: false}]);
+    setTasks([...newTasks, {id: Math.floor(Math.random() * 10000),name: val}]);
     setVal('')
   }
-  const completeTask = () => {
+  const completeTask = (id) => {
     const newTasks = [...tasks];
-    setTasks(newTasks.map(newTask => ({...newTask, completed: true})));
+    setTasks(newTasks.filter(newTask => {
+      return newTask.id !== id
+    }));
   }
-  
+  console.log(tasks);
   return (
     <div>
       <div className='tutorial'>
@@ -27,7 +27,7 @@ const FormTodo = () => {
           {
           tasks.map(task =>
             <li key={task.name}>
-              <button onClick={(e) => completeTask(e)}>完了</button>
+              <button onClick={() => completeTask(task.id)}>完了</button>
               <span>{task.name}</span>
             </li>
           )
