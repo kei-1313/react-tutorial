@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Count = () => {
+const Count = ({title}) => {
+  const [num, setNum] = useState(0);
+  const countUp = () => { 
+    setNum(prev => prev + 1)
+  }
   return (
     <div className='tutorial'>
-      <div>count :</div>
-      <button ></button>
+      <div>count{title} :{num}</div>
+      <button onClick={countUp}>カウント</button>
     </div>
   )
 }
