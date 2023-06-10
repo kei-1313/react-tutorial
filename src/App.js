@@ -5,6 +5,7 @@ import Arry from './component/Arry';
 import Count from './component/Count';
 import { useState } from 'react';
 import Arry02 from './component/Arry02';
+import FormTodo from './component/FormTodo/FormTodo';
 function App() {
   const [flag, setFlag] = useState(true);
 
@@ -29,7 +30,8 @@ function App() {
       <Arry/>
       <Arry02/>
       {flag ? <Count title="A" count={num01} countup={countUp01}/> : <Count title="B"  count={num02} countup={countUp02}/> }
-      <button onClick={toggleButton}>toggle</button>
+      <button className='btn' onClick={toggleButton}>toggle</button>
+      <FormTodo/>
     </div>
   );
 }

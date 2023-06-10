@@ -46,3 +46,19 @@ ul {
   padding: 20px 0 0 0;
   margin: 0;
 }
+
+.btn {
+  text-align: center;
+  margin: 0 auto;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.Form {
+  margin-top: 20px;
+}
+
+.Reminder {
+  margin-bottom: 20px;
+}
