@@ -35,3 +35,8 @@
 .game-item {
   margin-bottom: 15px;
 }
+
+.tutorial {
+  text-align: center;
+  padding: 100px 0 0;
+}
