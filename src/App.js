@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Arry02 from './component/Arry02';
 import FormTodo from './component/FormTodo/FormTodo';
 
-import { ChakraProvider } from '@chakra-ui/react'
+
 function App() {
   const [flag, setFlag] = useState(true);
 
