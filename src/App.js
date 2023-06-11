@@ -8,6 +8,7 @@ import Arry02 from './component/Arry02';
 import FormTodo from './component/FormTodo/FormTodo';
 import ModalContainer from './component/Modal/ModalContainer';
 import Reducer from './component/Reducer/Reducer';
+import ParentContext from './component/context/ParentContext';
 
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
       <ModalContainer />
 
       <Reducer/>
+
+      <ParentContext />
     </div>
   );
 }
