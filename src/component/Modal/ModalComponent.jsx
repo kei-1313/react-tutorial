@@ -14,7 +14,7 @@ const ModalComponent = ({}) => {
   return (
     <>
       <div>
-        this is modal 
+        this is modal
       </div>
       {/* <Modal>
         <ModalOverlay />

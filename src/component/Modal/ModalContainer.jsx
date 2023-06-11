@@ -16,11 +16,7 @@ const ModalContainer = () => {
 
         <div className='container start'></div>
 
-        {
-          modalOpen?
-          <Button colorScheme='teal' size='md' onClick={() => setModalOpen(false)}>close</Button>
-          : <Button colorScheme='teal' size='md' onClick={() => setModalOpen(true)}>Open</Button>
-        }
+        <Button colorScheme='teal' size='md' onClick={() => setModalOpen(prev => !prev)}>{modalOpen ? "close" : "open"}</Button>
         {
           modalOpen && (
             <ModalPortal>
