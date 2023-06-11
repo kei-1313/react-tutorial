@@ -1,10 +1,12 @@
-import React from 'react'
+import {useContext} from 'react'
+import { MyContext } from './ParentContext'
 import GrandChild from './GrandChild'
 
 const Child = () => {
+  const [val,] = useContext(MyContext);
   return (
     <>
-    <div>Child</div>
+    <div>Child: {val}</div>
     <GrandChild />
     </>
   )

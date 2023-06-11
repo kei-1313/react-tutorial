@@ -1,9 +1,12 @@
 import { useContext } from 'react'
 import { MyContext } from './ParentContext';
 const GrandChild = () => {
-  const value = useContext(MyContext);
+  const [val, setVal] = useContext(MyContext);
   return (
-    <div>{value}</div>
+    <>
+      <div>グラント</div>
+      <button onClick={() => setVal(prev => prev + 1)}>孫から</button>
+    </>
   )
 }
 
