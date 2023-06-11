@@ -6,6 +6,7 @@ import Count from './component/Count';
 import { useState } from 'react';
 import Arry02 from './component/Arry02';
 import FormTodo from './component/FormTodo/FormTodo';
+import ModalContainer from './component/Modal/ModalContainer';
 
 
 function App() {
@@ -28,12 +29,18 @@ function App() {
   return (
     <div className="App">
       <Game />
+
       <Obj/>
+
       <Arry/>
+
       <Arry02/>
+
       {flag ? <Count title="A" count={num01} countup={countUp01}/> : <Count title="B"  count={num02} countup={countUp02}/> }
       <button className='btn' onClick={toggleButton}>toggle</button>
       <FormTodo/>
+      
+      <ModalContainer />
     </div>
   );
 }

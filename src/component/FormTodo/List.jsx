@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from "styled-components";
+// import styled from "styled-components";
 import { VStack, StackDivider, HStack, IconButton, Text } from '@chakra-ui/react'
 import { VscCheck} from 'react-icons/vsc';
 const List = ({ tasks, completeTask }) => {
@@ -7,15 +7,15 @@ const List = ({ tasks, completeTask }) => {
     completeTask(id)
   }
 
-  const CompleteButton = styled.button`
-    width: 50px;
-    padding: 4px 0;
-    border-radius: 4px;
-    border: 1px solid skyblue;
-    background-color: skyblue;
-    color: white;
-    margin-right: 10px;
-  `
+  // const CompleteButton = styled.button`
+  //   width: 50px;
+  //   padding: 4px 0;
+  //   border-radius: 4px;
+  //   border: 1px solid skyblue;
+  //   background-color: skyblue;
+  //   color: white;
+  //   margin-right: 10px;
+  // `;
   return (
     <ul>
         <VStack 
