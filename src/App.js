@@ -9,6 +9,7 @@ import FormTodo from './component/FormTodo/FormTodo';
 import ModalContainer from './component/Modal/ModalContainer';
 import Reducer from './component/Reducer/Reducer';
 import ParentContext from './component/context/ParentContext';
+import Effect from './component/effect/Effect';
 
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
       <Reducer/>
 
       <ParentContext />
+
+      <Effect/>
     </div>
   );
 }
