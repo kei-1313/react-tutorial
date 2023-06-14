@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
 const End = () => {
+  const [time, setTime] = useState(0);
   useEffect(() => {
     console.log("start");
+
+    let intervalId = null;
+    
+    intervalId = window.setInterval(() => {
+      setTime(prev => prev + 1);
+    }, 1000)
+    console.log(intervalId);
     // 依存配列を設定してなければ、コンポーネントが削除された段階で発火
     return() => {
       console.log("end");
+      window.clearInterval(intervalId)
+      console.log(intervalId);
     }
   })
   return (
@@ -13,7 +23,7 @@ const End = () => {
       <div>
         エンド
       </div>
-      
+      <div>{time}<span>秒経過</span></div>
     </>
   )
 }
@@ -21,15 +31,13 @@ const End = () => {
 
 
 const Effect = () => {
-  const [time, setTime] = useState(0);
+  
   const [status, setStatus] = useState(false)
   const [isDisplay, setIsDisplay] = useState(true);
 
   useEffect(() => {
     console.log("call back");
-    // window.setInterval(() => {
-    //   setTime(prev => prev + 1);
-    // }, 1000)
+    
   }, [])
 
   useEffect(() => {
@@ -37,13 +45,16 @@ const Effect = () => {
       window.alert("アラートです");
     }
 
-    
+    //依存配列に値が入っているときは、先に実行される
+    return () => {
+      
+      console.log("updated");
+    }
   }, [status])
 
   return (
     <div className='tutorial'>
-      <h3>{time}</h3>
-      <span>秒経過</span>
+      
 
       <div className="check">
         <label htmlFor="check">
