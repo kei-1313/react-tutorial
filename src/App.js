@@ -50,7 +50,7 @@ function App() {
 
       <ParentContext />
 
-      <Effect/>
+      {/* <Effect/> */}
 
       <Timer/>
     </div>
