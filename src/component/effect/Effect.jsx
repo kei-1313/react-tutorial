@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 
 const End = () => {
   const [time, setTime] = useState(0);
@@ -7,16 +7,20 @@ const End = () => {
 
     let intervalId = null;
     
-    intervalId = window.setInterval(() => {
-      setTime(prev => prev + 1);
-    }, 1000)
-    console.log(intervalId);
+    // intervalId = window.setInterval(() => {
+    //   setTime(prev => prev + 1);
+    // }, 1000)
+    // console.log(intervalId);
     // 依存配列を設定してなければ、コンポーネントが削除された段階で発火
     return() => {
       console.log("end");
-      window.clearInterval(intervalId)
+      // window.clearInterval(intervalId)
       console.log(intervalId);
     }
+  })
+
+  useLayoutEffect(() => {
+    console.log("useLayoutEffect");
   })
   return (
     <>

@@ -10,6 +10,7 @@ import ModalContainer from './component/Modal/ModalContainer';
 import Reducer from './component/Reducer/Reducer';
 import ParentContext from './component/context/ParentContext';
 import Effect from './component/effect/Effect';
+import Timer from './component/effect/Timer';
 
 
 function App() {
@@ -50,6 +51,8 @@ function App() {
       <ParentContext />
 
       <Effect/>
+
+      <Timer/>
     </div>
   );
 }
