@@ -2,30 +2,36 @@ import React, { useEffect, useState } from 'react'
 
 const Timer = () => {
   const [time, setTime] = useState(0);
-  const [start, setStart] = useState(null);
+  const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
-    if(start) {
+    if(isRunning) {
       let intervalId = null;
       intervalId = window.setInterval(() => {
         setTime(prev => prev + 1);
       }, 1000)
       return() => {
         clearInterval(intervalId);
-        setTime(0)
       } 
     } 
-      
-    
-  }, [start])
+  }, [isRunning])
+
+  const toggle = () => {
+    setIsRunning(prev => !prev)
+  }
+
+  const reset = () => {
+    setIsRunning(false)
+    setTime(0)
+  }
 
   return (
     <>
       <div className="tutorial">
         <h2>Timer</h2>
         <h3>{time}秒経過</h3>
-        <button onClick={() => setStart(true)}>スタート</button>
-        <button onClick={() => setStart(false)}>リセット</button>
+        <button onClick={toggle}>{isRunning? '一時停止': 'スタート' }</button>
+        <button onClick={reset}>リセット</button>
       </div>
     </>
   )
