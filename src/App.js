@@ -9,10 +9,12 @@ import FormTodo from './component/FormTodo/FormTodo';
 import ModalContainer from './component/Modal/ModalContainer';
 import Reducer from './component/Reducer/Reducer';
 import ParentContext from './component/context/ParentContext';
-import Effect from './component/effect/Effect';
+// import Effect from './component/effect/Effect';
 import Timer from './component/effect/Timer';
-import ParentStore from './component/store/ParentStore';
+import ParentStore from './component/storePractice/ParentStore';
 
+import { Provider } from 'react-redux';
+import { store } from "./store"
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -54,8 +56,9 @@ function App() {
       {/* <Effect/> */}
 
       <Timer/>
-
-      <ParentStore/>
+      <Provider store={store}>
+        <ParentStore/>
+      </Provider>
     </div>
   );
 }
