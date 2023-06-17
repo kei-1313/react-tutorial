@@ -11,6 +11,7 @@ import Reducer from './component/Reducer/Reducer';
 import ParentContext from './component/context/ParentContext';
 import Effect from './component/effect/Effect';
 import Timer from './component/effect/Timer';
+import ParentStore from './component/store/ParentStore';
 
 
 function App() {
@@ -53,6 +54,8 @@ function App() {
       {/* <Effect/> */}
 
       <Timer/>
+
+      <ParentStore/>
     </div>
   );
 }
