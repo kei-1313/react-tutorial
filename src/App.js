@@ -11,7 +11,7 @@ import Reducer from './component/Reducer/Reducer';
 import ParentContext from './component/context/ParentContext';
 // import Effect from './component/effect/Effect';
 import Timer from './component/effect/Timer';
-import ParentStore from './component/storePractice/ParentStore';
+import { CounterProvider } from './component/storePractice/CounterContext';
 
 // import { Provider } from 'react-redux';
 // import { store } from "./store"
@@ -57,7 +57,7 @@ function App() {
 
       <Timer/>
       {/* <Provider> */}
-        <ParentStore/>
+        <CounterProvider/>
       {/* </Provider> */}
     </div>
   );
