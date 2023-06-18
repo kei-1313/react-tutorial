@@ -19,9 +19,7 @@ const CounterProvider = ({ children }) => {
   return (
     <CounterContext.Provider value={state}>
       <CounterDispatchContext.Provider value={dispatch}>
-        <div className="tutorial">
-          {children}
-        </div>
+        {children}
       </CounterDispatchContext.Provider>
     </CounterContext.Provider>
   )
