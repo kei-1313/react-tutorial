@@ -13,8 +13,8 @@ import ParentContext from './component/context/ParentContext';
 import Timer from './component/effect/Timer';
 import ParentStore from './component/storePractice/ParentStore';
 
-import { Provider } from 'react-redux';
-import { store } from "./store"
+// import { Provider } from 'react-redux';
+// import { store } from "./store"
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -56,9 +56,9 @@ function App() {
       {/* <Effect/> */}
 
       <Timer/>
-      <Provider store={store}>
+      {/* <Provider> */}
         <ParentStore/>
-      </Provider>
+      {/* </Provider> */}
     </div>
   );
 }
