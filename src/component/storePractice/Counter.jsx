@@ -4,11 +4,13 @@ import CounterButton from "./CounterButton"
 const Counter = () => {
   return (
     <>
-      <CounterResult />
-      <CounterButton step={2} calcType="+" />
-      <CounterButton step={2} calcType="-" />
-      <CounterButton step={10} calcType="+" />
-      <CounterButton step={10} calcType="-" />
+      <div className="tutorial">
+        <CounterResult />
+        <CounterButton step={2} calcType="+" />
+        <CounterButton step={2} calcType="-" />
+        <CounterButton step={10} calcType="+" />
+        <CounterButton step={10} calcType="-" />
+      </div>
     </>
   )
 }

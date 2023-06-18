@@ -14,8 +14,8 @@ import Timer from './component/effect/Timer';
 import { CounterProvider } from './component/storePractice/CounterContext';
 import Counter from './component/storePractice/Counter';
 
-// import { Provider } from 'react-redux';
-// import { store } from "./store"
+import { Provider } from 'react-redux';
+import store from "./store"
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -57,11 +57,9 @@ function App() {
       {/* <Effect/> */}
 
       <Timer/>
-      {/* <Provider> */}
-        <CounterProvider>
-          <Counter/>
-        </CounterProvider>
-      {/* </Provider> */}
+      <Provider store={ store }>
+        <Counter/>
+      </Provider>
     </div>
   );
 }
