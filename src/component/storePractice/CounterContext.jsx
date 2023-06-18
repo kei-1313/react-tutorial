@@ -5,7 +5,7 @@ import Counter from "./Counter";
 const CounterContext = createContext();
 const CounterDispatchContext = createContext();
 
-const CounterProvider = () => {
+const CounterProvider = ({ children }) => {
   const [state, dispatch] = useReducer((prev, { type, step }) => {
     switch (type) {
       case "+":
@@ -20,7 +20,7 @@ const CounterProvider = () => {
     <CounterContext.Provider value={state}>
       <CounterDispatchContext.Provider value={dispatch}>
         <div className="tutorial">
-          <Counter />
+          {children}
         </div>
       </CounterDispatchContext.Provider>
     </CounterContext.Provider>
