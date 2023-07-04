@@ -6,12 +6,11 @@ const Arry02List = ({ animals }) => {
       {animals
         .map((animal) => {
           return (
-            <Arry02Item animal={animal} key={animal}/> 
+            <Arry02Item animal={animal} key={animal} />
           );
         })
       }
     </ul>
   )
 }
-
 export default Arry02List

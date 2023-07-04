@@ -1,9 +1,9 @@
 import React from 'react'
 // import styled from "styled-components";
 import { VStack, StackDivider, HStack, IconButton, Text } from '@chakra-ui/react'
-import { VscCheck} from 'react-icons/vsc';
+import { VscCheck } from 'react-icons/vsc';
 const List = ({ tasks, completeTask }) => {
-  const deleteTask = (id) => { 
+  const deleteTask = (id) => {
     completeTask(id)
   }
 
@@ -18,24 +18,24 @@ const List = ({ tasks, completeTask }) => {
   // `;
   return (
     <ul>
-        <VStack 
-          divider={<StackDivider borderColor='gray.200' />}
-          borderColor="black.100"
-          borderWidth="1px"
-          borderRadius="3px"
-          alignItems="start"
-          mx="auto"
-          p={3}
-          w={["300px","500px","700px","900px"]}
-        >
+      <VStack
+        divider={<StackDivider borderColor='gray.200' />}
+        borderColor="black.100"
+        borderWidth="1px"
+        borderRadius="3px"
+        alignItems="start"
+        mx="auto"
+        p={3}
+        w={["300px", "500px", "700px", "900px"]}
+      >
         {
-        tasks.map(task =>
-          <HStack key={task.id}>
-            <IconButton onClick={() => deleteTask(task.id)} icon={<VscCheck/>}>完了</IconButton>
-            <Text>{task.name}</Text>
-          </HStack>
-        )
-      }
+          tasks.map(task =>
+            <HStack key={task.id}>
+              <IconButton onClick={() => deleteTask(task.id)} icon={<VscCheck />}>完了</IconButton>
+              <Text>{task.name}</Text>
+            </HStack>
+          )
+        }
       </VStack>
     </ul>
   )
