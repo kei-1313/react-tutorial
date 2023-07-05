@@ -11,11 +11,13 @@ import Reducer from './component/Reducer/Reducer';
 import ParentContext from './component/context/ParentContext';
 // import Effect from './component/effect/Effect';
 import Timer from './component/effect/Timer';
-import { CounterProvider } from './component/storePractice/CounterContext';
+// import { CounterProvider } from './component/storePractice/CounterContext';
 import Counter from './component/storePractice/Counter';
 
 import { Provider } from 'react-redux';
 import store from "./store"
+
+import User from './component/user/User'
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -60,6 +62,8 @@ function App() {
       <Provider store={ store }>
         <Counter/>
       </Provider>
+
+      <User/>
     </div>
   );
 }
