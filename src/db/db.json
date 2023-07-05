@@ -1,0 +1,40 @@
+{
+  "user" : [
+    {
+      "name": "John Smith",
+      "age": 30,
+      "email": "john.smith@example.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "interests": ["sports", "music", "reading"]
+    },
+    {
+      "name": "van van",
+      "age": 30,
+      "email": "john.smith@example.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "interests": ["sports", "music", "reading"]
+    },
+    {
+      "name": "will Smith",
+      "age": 30,
+      "email": "john.smith@example.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "interests": ["sports", "music", "reading"]
+    }
+  ]
+}
