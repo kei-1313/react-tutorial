@@ -17,7 +17,16 @@ function User() {
   return (
     <>
       <div className='tutorial'>
-        <h1>User</h1>
+        {users.map(user => {
+          return (
+            <div key={user.id}>
+              <h3>{user.name}</h3>
+              <p>age : {user.age}</p>
+              <p>{user.address.street}</p>
+              <p>{user.interests.join(',')}</p>
+            </div>
+          )
+        })}
       </div>
     </>
   )
