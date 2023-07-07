@@ -1,5 +1,5 @@
 {
-  "user" : [
+  "user": [
     {
       "id": 1,
       "name": "John Smith",
@@ -11,7 +11,11 @@
         "state": "NY",
         "zip": "10001"
       },
-      "interests": ["sports", "music", "reading"]
+      "interests": [
+        "sports",
+        "music",
+        "reading"
+      ]
     },
     {
       "id": 2,
@@ -24,7 +28,11 @@
         "state": "NY",
         "zip": "10001"
       },
-      "interests": ["sports", "music", "reading"]
+      "interests": [
+        "sports",
+        "music",
+        "reading"
+      ]
     },
     {
       "id": 3,
@@ -37,7 +45,29 @@
         "state": "NY",
         "zip": "10001"
       },
-      "interests": ["sports", "music", "reading"]
+      "interests": [
+        "sports",
+        "music",
+        "reading"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "postman",
+      "age": 30,
+      "email": "john.smith@example.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "Japan",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "interests": [
+        "sports",
+        "music",
+        "reading",
+        "netflix"
+      ]
     }
   ]
 }
