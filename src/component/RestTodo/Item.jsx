@@ -27,8 +27,11 @@ const Item = ({ todo }) => {
     })
   };
 
+
   const complete = (todo) => {
-    dispatch({ type: "todo/delete", todo });
+    todoApi.delete(todo).then(todo => {
+      dispatch({ type: "todo/delete", todo });
+    })
   };
 
   return (
