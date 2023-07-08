@@ -2,7 +2,7 @@
   "todo": [
     {
       "id": "c5868bfe-fa1d-4891-acd3-bc43959a9bb7",
-      "content": "洗濯",
+      "content": "洗濯です",
       "editing": false,
       "completed": true
     },
@@ -17,10 +17,6 @@
       "content": "買い物",
       "editing": false,
       "completed": false
-    },
-    {
-      "id": 1,
-      "content": "net"
     }
   ],
   "user": [
