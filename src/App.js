@@ -18,6 +18,7 @@ import { Provider } from 'react-redux';
 import store from "./store"
 
 import User from './component/user/User'
+import Todo from './component/RestTodo/Todo'
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -64,6 +65,8 @@ function App() {
       </Provider>
 
       <User/>
+
+      <Todo/>
     </div>
   );
 }
