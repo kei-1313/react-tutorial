@@ -10,7 +10,7 @@ function User() {
       const res = await axios.get('http://localhost:3003/user')
 
       setUsers(res.data);
-      console.log(res.data);
+      // console.log(res.data);
     }
     getUser();
   }, [])

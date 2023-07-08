@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 const CounterResult = () => {
   const state = useSelector(state => state.counter);
-  console.log(state);
+  // console.log(state);
   return <h3>{state}</h3>;
 };
 

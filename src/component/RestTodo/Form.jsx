@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatchTodos } from "./TodoContext";
-const Form = ({ createTodo }) => {
+const Form = () => {
   const [enteredTodo, setEnteredTodo] = useState("");
   const dispatch = useDispatchTodos();
 
