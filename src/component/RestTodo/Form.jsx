@@ -16,7 +16,6 @@ const Form = () => {
     };
 
     todoApi.post(newTodo).then(newTodo => {
-      console.log(newTodo);
       dispatch({ type: 'todo/add', todo: newTodo });
     })
 
